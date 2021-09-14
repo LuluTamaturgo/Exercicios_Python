@@ -1,0 +1,20 @@
+"""
+Uma empresa contrata um encanador a R$ 30,00 por dia. Faça um programa que solicite o numero de dias
+trabalhados pelo encanador e imprima a quantia liquida que deverá ser paga, sabendo-se que são descontados
+8% para imposto de renda.
+"""
+
+print("Digite a quantidade de dias trabalhados : ")
+qtd_dias = (int(input()))
+print("Digite o valor do dia trabalhado : ")
+valor_dia = (float(input()))
+
+# calculando o valor que o encanador irá receber pelos dias trabalhados
+valor_rec = qtd_dias * valor_dia
+
+# calculando o valor a receber - 8%
+valorDesconto = valor_rec * 0.08
+
+valorLiquido = valor_rec - valorDesconto
+
+print(f"Será recebido o valor de R${valorLiquido:.2f} onde R${valorDesconto:.2f} representa os 8% descontado")
