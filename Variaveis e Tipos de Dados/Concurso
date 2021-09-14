@@ -1,0 +1,16 @@
+"""
+A importancia de R$ 780.000,00 será divida entre três ganhadores de um concurso.
+Sendo que da quantia total:
+* O primeiro ganhador receberá 46%
+* O segundo ganhador receberá 32%
+* o terceiro receberá o restante.
+Calcule e imprima a quantia ganha por cada um dos ganhadores.
+"""
+print("Informe o valor do premium:")
+premium = (float(input()))
+
+primeiro_lugar = (premium * 46/100)
+segundo_lugar = (premium * 32/100)
+terceiro_lugar = (premium * 22/100)
+
+print(f"Os premios são: \n Primeiro Lugar = R$ {primeiro_lugar:.3f}\n Segundo Lugar = R$ {segundo_lugar:.3f}\n Terceiro Lugar =R$ {terceiro_lugar:.3f}")
