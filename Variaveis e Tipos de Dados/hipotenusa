@@ -1,0 +1,18 @@
+"""
+Sejam a e b os catetos de um triângulo, onde a hipotenusa é obtida pela equação:
+hipotenusa = raiz (a² + b²). Faça um programa que receba os valores de a e b e calcule
+o valor da hipotenusa através da equação. Imprima o resultado dessa operação.
+"""
+"importando o modulo para calcular a raiz quadrada"
+import math
+
+print("Digite os valores de a e b :")
+a = (int(input()))
+b = (int(input()))
+
+a_quadrado = (a*a)
+b_quadrado = (b*b)
+soma = a_quadrado + b_quadrado
+hipotenusa = math.sqrt(soma)
+
+print(f"A hipotenusa dos valores : {a} e {b} = {hipotenusa:.2f}")
