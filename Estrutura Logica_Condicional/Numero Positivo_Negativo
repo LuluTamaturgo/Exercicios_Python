@@ -1,0 +1,16 @@
+"""
+Leia um numero fornecido pelo usuário. Se este numero for positivo imprima a raiz quadrada.
+Do contrario, imprima o numero quadrado.
+"""
+import math
+
+print("Digite um numero:")
+num = (int(input()))
+
+if num > 0:
+    raiz = (float(math.sqrt(num)))
+    print(f"O numero é positivo, sua raiz quadrada é: {raiz:.2f}")
+else:
+    quadrado = num * num
+    print(f"O numer é negativo, seu valor {num}² é: {quadrado}")
+
