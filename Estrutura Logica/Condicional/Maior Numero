@@ -1,0 +1,10 @@
+Faça um programa que receba dois numeros e mostre qual deles é o maior:
+
+print("Digite dois numeros:")
+num1 = (int(input()))
+num2 = (int(input()))
+
+if num1 > num2:
+    print(f"Numero {num1} é maior que {num2}")
+else:
+    print(f"Numero {num2} é maior que {num1}")
