@@ -1,0 +1,8 @@
+
+"""
+Faça um programa que leia um numero inteiro e o imprima
+"""
+print("Digite um numero :")
+numero = (int(input()))
+print(f"O numero informado foi {numero}")
+
