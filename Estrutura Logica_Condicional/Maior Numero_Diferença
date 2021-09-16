@@ -1,0 +1,13 @@
+"""
+Escreva um programa que, dados dois números inteiros, mostre na tela o maior deles, assim como
+a diferença existente entre ambos.
+"""
+
+print("Digite dois numero:")
+num1 = (int(input()))
+num2 = (int(input()))
+
+if num1 > num2:
+    print(f"O maior numero é {num1} e sua diferença é {num1-num2}")
+else:
+    print(f"O maior numero é {num2} e sua diferença é {num2-num1}")
