@@ -1,0 +1,15 @@
+"""
+Faça um programa que leia duas notas de um aluno, verifique se as notas são válidas e exiba 
+na tela a média destas notas. Uma nota válida deve ser, obrigatoriamente, um valor ente 0.0 e 10.0,
+onde caso a nota não possua um valor válido, este fato deve ser informado ao usuário e o programa termina.
+"""
+
+print("Digite as duas notas:")
+nota01 = (float(input()))
+nota02 = (float(input()))
+
+if (nota01 >= 0.0 and nota01 <= 10.0) and (nota02 >=0.0 and nota02 <=10.0):
+    media = (nota01 + nota02)/2
+    print(f"A media é {media}")
+else:
+    print(f"As notas são inválidas. O programa será encerrado!")
