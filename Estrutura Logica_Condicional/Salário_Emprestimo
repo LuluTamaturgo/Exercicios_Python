@@ -1,0 +1,18 @@
+"""
+Leia o salário de um trabalhador e o valor da prestação de um emprestimo. Se
+a prestação for maior que 20% do salário imprima: Emprestimo não concedido, caso contrario,
+imprima: Emprestimo concedido.
+"""
+
+print("Digite o valor do seu salário: R$ ")
+salario = (float(input()))
+
+print("Informe o valor da prestação do emprestimo: R$ ")
+val_prestacao = (float(input()))
+
+porcentagem_sal = salario * 20 / 100
+
+if val_prestacao > porcentagem_sal:
+    print(f"Emprestimo não concedido!")
+else:
+    print(f"Emprestimo concedido!")
