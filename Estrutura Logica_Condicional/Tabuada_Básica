@@ -1,0 +1,35 @@
+"""
+Faça um programa que mostre ao usuário um menu com 4 opções de operações matemáticas
+(as básicas por exemplo). O usuário escolhe uma das operações e o seu programa então pede dois valores
+númericos e realiza a operação, mostrando o resultado e saindo.
+"""
+print("                              ")
+print("********** M E N U **************")
+print("*                               *")
+print("*       Escolha uma opção:      *")
+print("*                               *")
+print("*        1 - Soma               *")
+print("*        2 - Subtração          *")
+print("*        3 - Multiplicação      *")
+print("*        4 - Divisão            *")
+print("*                               *")
+print("*********************************")
+opcao = (int(input()))
+print("Digite dois numeros:")
+num01 = (int(input()))
+num02 = (int(input()))
+
+if opcao == 1:
+    resultado = num01 + num02
+    print(f"Soma : {num01} + {num02} = {resultado}")
+elif opcao == 2:
+    resultado = num01 - num02
+    print(f"Subtração : {num01} - {num02} = {resultado}")
+elif opcao == 3:
+    resultado = num01 * num02
+    print(f"Multiplicação : {num01} * {num02} = {resultado}")
+elif opcao == 4:
+    resultado = num01 / num02
+    print(f"Divisão : {num01} / {num02} = {resultado}")
+else:
+    print("Opção Invalida!")
