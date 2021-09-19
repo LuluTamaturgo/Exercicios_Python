@@ -1,0 +1,19 @@
+"""
+Faça um programa que calcule e mostre a área de um trapezio. Sabe-se que:
+
+A = (basemaior + basemenor) * altura / 2
+
+Lembre-se a basemaior e a basemenor devem ser numeros maiores que zero
+"""
+
+print("Digite o valor das bases - Base Maior e Base Menor:")
+b_maior = (float(input()))
+b_menor = (float(input()))
+print("Digite a altura:")
+altura = (float(input()))
+
+if b_maior <= 0 or b_menor <=0:
+    print("Valor invalido")
+else:
+   resultado = ((b_maior + b_menor) * altura) / 2
+   print(f"a área do triangulo é {resultado:.2f}")
