@@ -1,0 +1,28 @@
+"""
+Dados três valores A, B e C, verifique se eles podem ser valores dos lados de um triângulo e,
+se forem, se é um triângulo é escaleno, equilátero ou isoscéles, considerando os seguintes criterios:
+* o comprimento de cada lado de um triângulo é menor do que a soma dos outros dois lados;
+* chama-se equilátero o triângulo que tem três lados iguais;
+* denominam-se isoscéles o triângulo que tem o comprimento de dois lados iguais;
+* recebe o nome de escaleno, o triângulo que tem os três lados diferentes;
+
+"""
+print("Informe 3 valores inteiros:")
+A = (int(input()))
+B = (int(input()))
+C = (int(input()))
+
+if (A < B + C) and (B < A + C) and (C < A + B):
+    status = True
+    print("Os valores informados formam um triângulo!")
+else:
+    status = False
+    print("Os valores informados não formam um triângulo!")
+
+if status == True:
+   if (A == B) and (B == C) and (C == A):
+        print("O triângulo é um Equilátero")
+   elif (A == B) or (B == C) or (C == A):
+       print("O triângulo é um Isoscéles")
+   else:
+       print("O triângulo é um Escaleno")
