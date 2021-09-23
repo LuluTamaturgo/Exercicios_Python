@@ -1,0 +1,36 @@
+"""
+Calcule as raizes da equação do segundo grau, lembrando-se que:
+
+x = -b +/- raiz(delta) / 2.a
+
+Onde, Delta = b² -4ac
+
+A variavel é tem que ser diferente de zero. Caso seja igual, imprima a mensagem : " Não é equação de segundo grau"
+
+* Se Delta < 0, não existe real. Imprima: Não existe raiz;
+* Se Delta = 0, existe uma raiz real. Imprima a raiz e a mensagem Raiz Unica;
+* Se Delta >= 0; Imprima as duas raizes Reais;
+"""
+
+import math
+
+print("Coeficiente a:")
+a = (float(input()))
+print("Coeficiente b:")
+b = (float(input()))
+print("Coeficiente c:")
+c = (float(input()))
+
+delta = (b**2) - 4 * a * c
+
+if (a == 0) or (delta < 0):
+    print("Não existe raiz")
+elif delta == 0:
+    x1 = (-b + math.sqrt(delta) / (2*a))
+    x2 = (-b - math.sqrt(delta) / (2*a))
+    if (x1 == x2):
+        print(f"{x1} Raiz Unica")
+else:
+    x1 = (-b + math.sqrt(delta) / (2 * a))
+    x2 = (-b - math.sqrt(delta) / (2 * a))
+    print(f" Primeira Raiz : {x1:.3f}; Segunda Raiz : {x2:.3f}")
