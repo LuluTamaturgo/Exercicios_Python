@@ -1,0 +1,14 @@
+"""
+Faça um programa para verificar se um determinado número inteiro é divisivel por 3 ou por 5
+mas não simultaneamente pelos dois.
+"""
+
+print("Digite um numero:")
+numero = (int(input()))
+
+if numero % 3 == 0:
+    print("Numero divisivel por 3")
+elif numero % 5 == 0:
+    print("Numero divisivel por 5")
+else:
+    print("Numero não é divisivel por 3 nem 5")
