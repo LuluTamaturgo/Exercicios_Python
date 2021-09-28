@@ -1,0 +1,13 @@
+"""
+Escreva um programa que imprima na tela, de 1 até 100, de um em um, duas vezes.
+A primeira vez usando FOR, a segunda usando WHILE.
+"""
+print("Usando FOR:")
+for cont in range(100):
+    print(cont)
+
+print("Usando WHILE:")
+num = 1
+while num <= 100:
+    print(num)
+    num = num + 1
