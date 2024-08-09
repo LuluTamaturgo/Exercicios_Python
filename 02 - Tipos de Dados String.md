@@ -291,8 +291,10 @@ print(frase)
 Python 2024
 ~~~~
 
-Neste estudo aprendemos:
-imprementação de strings;
-sua estrutura;
-como manipular as strings;
-metodos mais comuns utilizados em strings;
+### <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⭕</font></font> Aqui, aprendemos:
+***
+
+- [x] Implementação de strings;
+- [x] sua estrutura;
+- [x] como manipular as strings;
+- [x] metodos mais comuns utilizados em strings; 
