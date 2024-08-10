@@ -156,7 +156,7 @@ Ou seja o resultado é falso pois, não existe m na palavra Python.
 ~~~~python
 palavra = 'Python'
 
-#aqui ele nega a existencia da leta n na palavra python:
+#aqui ele nega a existencia da letra m na palavra python:
 print('m' not in palavra)
 ~~~~
 
