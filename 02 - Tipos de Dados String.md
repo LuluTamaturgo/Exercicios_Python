@@ -1,7 +1,7 @@
 ***
 # <h1 align="center"> Tipos de Dados String </h1>
 ***
-Em python trabalhamos com tipo de dados String. Nas linguagens de alto nível sua manipulação geralmete é fácil.
+Em python trabalhamos com tipo de dados String. Nas linguagens de alto nível sua manipulação geralmente é fácil.
 
 ### <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⭕</font></font> Criando e manipulando texto:
 ***
