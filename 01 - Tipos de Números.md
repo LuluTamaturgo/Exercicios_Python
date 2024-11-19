@@ -139,7 +139,7 @@ print(soma)
 print(subtracao)
 print(multiplicacao)
 print(divisao)
-print(divisao_facionada)
+print(divisao_fracionada)
 print(resto)
 print(potencia)
 
