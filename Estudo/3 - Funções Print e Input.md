@@ -1,28 +1,16 @@
 ***
 # <h1 align="center"> Funções : Print e Input </h1>
 ***
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⚠</font></font> Funções Integradas (built-In):
 
-Em todos os programas é realizado a manipulação de números e textos (string).
-Em python, a partir da versão 3.0, os tipos de números são:
+Para iniciarmos, primeiramente, devemos entender que dentro do python existe funções built-In (funções integradas).
+Elas são um conjunto de comandos pré-definidos que executam tarefas específicas, podendo ser chamadas para executar uma ação ao longo do código.
 
-
-* int :
-  * crescem até o limite da memória;
-* float :
-  *  representam números com casas décimais;
-* complex :
-   * são menos utilizados em nosso dia a dia. Eles representam a forma algébrica
-z = a + ib - composta pela parte real: a e, a parte imaginária: b.
-Um exemplo de uso de números complexos é a raiz quadrada de um número negativo, geralmente são utilizados
-em áreas como Engenharia, Estatistica, etc.
-
-### <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⭕</font></font> Função Type:
+### <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⭕</font></font> A função print() em Python: :
 ***
-type(valor)
+**Imagine que você está conversando com um amigo e quer mostrar algo para ele.** Você pode apontar para um objeto, fazer um gesto ou simplesmente dizer o que você quer mostrar.
 
-Para confirmamos os ajustes que iremos executar logo em seguida, iremos precisar da função type, cujo o objetivo é retornar o tipo de dado de uma variavel.
-
-
+**Em programação, a função `print()` faz um papel parecido.** Ela serve para mostrar algo na tela do computador, como se você estivesse "apontando" para um resultado e dizendo: "Olha só o que eu encontrei!".
 ### <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⭕</font></font> Armazenando os números em uma variável:
 ***
 
