@@ -1,4 +1,3 @@
-***
 # <h1 align="center"> Instalando o Python </h1>
 ***
 ### <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⭕</font></font> Acesse o site:
