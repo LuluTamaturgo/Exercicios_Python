@@ -43,12 +43,29 @@ Operadores são símbolos especiais que realizam operações em valores. Por exe
 ### <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⭕</font></font> Ordem de Precedência::
 ***
 Assim como na matemática, os operadores em programação têm uma ordem de execução. Essa ordem é chamada de precedência. Por exemplo, a multiplicação é realizada antes da adição.
-Imagine a expressão:
+
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">✏</font></font> Imagine a expressão:
 
 ~~~~
 2 + 3 * 4
 ~~~~
 
+Sem a ordem de precedência: Poderíamos interpretar essa expressão de duas maneiras:
+
+- (2 + 3) * 4 = 20
+- 2 + (3 * 4) = 14
+
+Com a ordem de precedência: A multiplicação é realizada antes da adição, então o resultado correto é 14.
+
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">✏</font></font> Por que a ordem de precedência é importante?
+
+- **Garante resultados corretos:** Ao seguir a ordem de precedência, você evita erros de cálculo.
+- **Facilita a leitura do código:** Quando a ordem de execução das operações é clara, o código fica mais fácil de entender.
+
+~~~~
+resultado = 2 + 3 * 4
+print(resultado)  # Imprime 14
+~~~~
 Para confirmamos os ajustes que iremos executar logo em seguida, iremos precisar da função type, cujo o objetivo é retornar o tipo de dado de uma variavel.
 
 
