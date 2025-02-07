@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gerenciador de Tarefas{% endblock %}</title>
+   
+    <style>
+        body {
+            background-color: #2D3E40; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #93BFB7; /* Cor do cabeçalho */
+            color: #2D3E40; /* Cor do texto do cabeçalho */
+            text-align: center; /* Centraliza o texto */
+            padding: 20px; /* Espaçamento interno */
+            position: fixed; /* Fixa o cabeçalho no topo */
+            width: 100%; /* Largura total */
+            top: 0; /* Fixa no topo */
+            z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+        }
+                
+        main {
+            margin-top: 80px; /* Espaço para o cabeçalho fixo */
+            padding: 20px; /* Espaçamento interno */
+        }
+
+        a {
+            color: #93BFB7; /* Cor do link */
+            text-decoration: none; /* Remove o sublinhado */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Sublinha ao passar o mouse */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+       
+        <h1>Gerenciador de Tarefas </h1>
+                        
+    </header>
+
+    <main>
+        
+        
+        <a href="{% url 'task_list' %}"> Lista de Taferas</a>
+       
+        {% block content %}{% endblock %}
+          
+    </main>
+     
+      
+ 
+</body>
+</html>

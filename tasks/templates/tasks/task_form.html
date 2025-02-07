@@ -1,0 +1,71 @@
+{% extends 'tasks/base.html' %}  <!-- Certifique-se que o caminho está correto -->
+
+{% block content %}
+    <h2>{% if form.instance.pk %}Editar{% else %}Criar{% endif %} Tarefa</h2>
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            {{ form.title.label }} <!-- Adiciona o rótulo do título -->
+            {{ form.title }} <!-- Campo de entrada do título -->
+        </div>
+        <div class="form-group">
+            {{ form.description.label }} <!-- Adiciona o rótulo da descrição -->
+            {{ form.description }} <!-- Campo de entrada da descrição -->
+        </div>
+        
+        <div class="button-container">
+            <button type="submit" class="btn">Salvar</button>
+            <a href="{% url 'task_list' %}" class="btn cancel">Cancelar</a>
+        </div>
+        
+    </form>
+
+    
+     
+
+<style>
+    .form-group {
+            margin-bottom: 15px; /* Espaçamento entre os campos */
+        }
+    .form-group input, .form-group textarea {
+            width: 100%; /* Faz com que os campos ocupem toda a largura disponível */
+            padding: 10px; /* Espaçamento interno dos campos */
+            border: 1px solid #ccc; /* Borda padrão */
+            border-radius: 5px; /* Bordas arredondadas */
+            box-sizing: border-box; /* Inclui padding e border na largura total */
+    }
+    .alarme {
+        width: 25%; /* Faz com que os campos ocupem toda a largura disponível */
+        padding: 10px; /* Espaçamento interno dos campos */
+        border: 1px solid #ccc; /* Borda padrão */
+        border-radius: 5px; /* Bordas arredondadas */
+        box-sizing: border-box; /* Inclui padding e border na largura total */
+    }
+    .button-container {
+        display: flex; /* Usar flexbox para alinhar os botões lado a lado */
+        gap: 10px; /* Espaçamento entre os botões */
+        margin-top: 20px; /* Espaçamento acima dos botões */
+    }
+    .btn {
+        background-color: #93BFB7; /* Cor de fundo dos botões */
+        color: #2D3E40; /* Cor do texto dos botões */
+        padding: 10px 20px; /* Espaçamento interno dos botões */
+        border: none; /* Remove a borda padrão */
+        border-radius: 5px; /* Bordas arredondadas */
+        text-decoration: none; /* Remove o sublinhado do link */
+        cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        transition: all 0.3s ease; /* Transição suave para o efeito de hover */
+    }
+    .btn:hover {
+        background-color: #E4F2E7; /* Cor de fundo ao passar o mouse */
+        color: #2D3E40; /* Cor do texto ao passar o mouse */
+        transform: scale(1.1); /* Aumenta o tamanho do botão */
+    }
+    .cancel {
+        display: inline-block; /* Garante que o link se comporte como um botão */
+    }
+</style>
+{% endblock %}
+
+

@@ -1,0 +1,143 @@
+{% extends 'tasks/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gerenciador de Tarefas{% endblock %}</title>
+    <style>
+        body {
+            background-color: #2D3E40;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #93BFB7;
+            color: #2D3E40;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+                      
+        main {
+            margin-top: 80px;
+            padding: 20px;
+        }
+        a {
+            color: #93BFB7;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            color: black;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #93BFB7;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Tarefas</h1>
+    </header>
+    
+    
+
+    <main>
+        <a href="{% url 'task_list' %}">Lista de Tarefas</a>
+    
+        {% block content %}
+            <h2>Lista de Tarefas</h2>
+            <div class="menu">
+                <a href="{% url 'task_create' %}" class="btn_Criar_Nova_Tarefa">Criar Nova Tarefa</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Data de Criação</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for task in tasks %}
+                    <tr>
+                        <td><a href="{% url 'task_detail' task.pk %}">{{ task.title }}</a></td>
+                        <td>{{ task.created_at|date:"d/m/Y H:i" }}</td>
+                        <td>{% if task.completed %}✅ Concluída{% else %}❌ Pendente{% endif %}</td>
+                        <td>
+                            <a href="{% url 'task_detail' task.pk %}"class="btn_botoes">Ver</a> |
+                            <a href="{% url 'task_update' task.pk %}"class="btn_botoes">Editar</a> |
+                            <form method="post" action="{% url 'task_delete' task.pk %}" style="display:inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn_botoes">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            <style>
+
+                .menu {
+                    position: fixed; /* Fixa o menu no topo */
+                    top: 20px; /* Distância do topo */
+                    left: 20px; /* Distância da esquerda */
+                    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+                }
+                .btn_Criar_Nova_Tarefa {
+                    background-color: #024554; /* Cor de fundo do botão */
+                    color: #C2C0A6; /* Cor do texto do botão */
+                    padding: 10px 20px; /* Espaçamento interno do botão */
+                    text-decoration: none; /* Remove o sublinhado */
+                    border-radius: 5px; /* Bordas arredondadas */
+                    transition: all 0.3s ease; /* Transição suave para o efeito de hover */
+                }
+                .btn_Criar_Nova_Tarefa:hover {
+                    background-color: #E4F2E7; /* Cor de fundo ao passar o mouse */
+                    color: #2D3E40; /* Cor do texto ao passar o mouse */
+                    transform: scale(1.1); /* Aumenta o tamanho do botão */
+                }
+
+                .btn_botoes {
+                    background-color: #93BFB7; /* Cor de fundo do botão */
+                    color: #2D3E40; /* Cor do texto do botão */
+                    padding: 10px 20px; /* Espaçamento interno do botão */
+                    text-decoration: none; /* Remove o sublinhado */
+                    border-radius: 5px; /* Bordas arredondadas */
+                    transition: all 0.3s ease; /* Transição suave para o efeito de hover */
+                    display: inline-block;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .btn_botoes:hover {
+                    background-color: #E4F2E7 !important; /* Nova cor ao passar o mouse */
+                    color: #2D3E40 !important; /* Mantém a cor do texto */
+                    transform: scale(1.1); /* Aumenta o tamanho do botão */
+                }
+            </style>
+        {% endblock %}
+    </main>
+</body>
+</html>
