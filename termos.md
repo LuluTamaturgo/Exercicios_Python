@@ -15,3 +15,5 @@ Este projeto se esforça para implementar as melhores práticas de segurança no
 A segurança das dependências de terceiros é importante para nós. [Mencione sua política sobre dependências - Ex: Mantemos nossas dependências atualizadas e revisamos periodicamente por vulnerabilidades conhecidas].
 
 Agradecemos a sua colaboração para manter o [Nome do seu projeto Python] seguro para todos.
+
+tiktok-developers-site-verification=Os8nvw3RVCuTFR9htrnP8puzDiZXPqOf
